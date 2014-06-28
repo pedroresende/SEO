@@ -1,0 +1,52 @@
+/* 
+    Created on : Jun 28, 2014, 9:58:05 AM
+    Author     : Pedro Resende <pedroresende@mail.resende.biz>
+*/
+/* line 6, /Users/pedroresende/Sites/SEO/src/SalesEngineOnline/DesafioBundle/Resources/public/less/landing_page.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/pedroresende\/Sites\/SEO\/src\/SalesEngineOnline\/DesafioBundle\/Resources\/public\/less\/landing_page\.less}line{font-family:\000036}}
+html,
+body {
+  background-color: #eee !important;
+  background: url('../images/login_bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* line 15, /Users/pedroresende/Sites/SEO/src/SalesEngineOnline/DesafioBundle/Resources/public/less/landing_page.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/pedroresende\/Sites\/SEO\/src\/SalesEngineOnline\/DesafioBundle\/Resources\/public\/less\/landing_page\.less}line{font-family:\0000315}}
+h1 {
+  text-align: center;
+}
+/* line 19, /Users/pedroresende/Sites/SEO/src/SalesEngineOnline/DesafioBundle/Resources/public/less/landing_page.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/pedroresende\/Sites\/SEO\/src\/SalesEngineOnline\/DesafioBundle\/Resources\/public\/less\/landing_page\.less}line{font-family:\0000319}}
+.form {
+  background-color: #ffffff;
+  margin-left: auto;
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  border-radius: 10px 10px 10px 10px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+/* line 32, /Users/pedroresende/Sites/SEO/src/SalesEngineOnline/DesafioBundle/Resources/public/less/landing_page.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/pedroresende\/Sites\/SEO\/src\/SalesEngineOnline\/DesafioBundle\/Resources\/public\/less\/landing_page\.less}line{font-family:\0000332}}
+.form h2 {
+  text-align: center;
+}
+/* line 37, /Users/pedroresende/Sites/SEO/src/SalesEngineOnline/DesafioBundle/Resources/public/less/landing_page.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/pedroresende\/Sites\/SEO\/src\/SalesEngineOnline\/DesafioBundle\/Resources\/public\/less\/landing_page\.less}line{font-family:\0000337}}
+.column-left {
+  width: 50%;
+  float: left;
+}
+/* line 41, /Users/pedroresende/Sites/SEO/src/SalesEngineOnline/DesafioBundle/Resources/public/less/landing_page.less */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/pedroresende\/Sites\/SEO\/src\/SalesEngineOnline\/DesafioBundle\/Resources\/public\/less\/landing_page\.less}line{font-family:\0000341}}
+.column-right {
+  width: 50%;
+  margin-left: 50%;
+}

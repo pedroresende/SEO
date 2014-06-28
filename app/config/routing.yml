@@ -1,0 +1,4 @@
+sales_engine_online_desafio:
+    resource: "@SalesEngineOnlineDesafioBundle/Resources/config/routing.yml"
+    prefix:   /
+

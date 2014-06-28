@@ -1,0 +1,95 @@
+{% extends "SalesEngineOnlineDesafioBundle:template:template.html.twig" %}
+
+{% block title %}Candidatura{% endblock %}
+
+{% block styles %}
+    {% stylesheets 
+        '@SalesEngineOnlineDesafioBundle/Resources/public/css/landing_page.css'
+    %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+    {% endstylesheets %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="col-md-3 col-sm-3 col-xs-2"></div>
+    <div class="col-md-6 col-sm-6 col-xs-8">
+        <h1>Formulário de Candidatura</h1>
+        <div class="form">
+            {% if error %}
+                <div class="alert alert-danger alert-dismissable">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                    {{ error|trans }}
+                </div>
+            {% endif %}
+            {{ form_start( form ) }}
+            <div id="xvolutions_adminbundle_page">
+                <div class="column-left">
+                    <p>{{ "Nome"|trans }}</p>
+                    {% if form_errors(form.nome)  %}
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ form_errors(form.nome) }}
+                        </div>
+                    {% endif %}
+                    <p>{{ form_widget( form.nome ) }}</p>
+                </div>
+                <div class="column-right">
+                    <p>{{ "Telefone"|trans }}</p>
+                    {% if form_errors(form.telefone)  %}
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ form_errors(form.telefone) }}
+                        </div>
+                    {% endif %}
+                    <p>{{ form_widget( form.telefone ) }}
+                </div>
+                <div class="column-left">
+                    <p>{{ "Data de Nascimento"|trans }}</p>
+                    <p>{{ form_widget( form.nascimento ) }}</p>
+                </div>
+                <div class="column-right">
+                    <p>{{ "Localidade"|trans }}</p>
+                    <p>{{ form_widget( form.localidade ) }}</p>
+                </div>
+                <div class="column-left">
+                    <p>{{ "Fotografia"|trans }}</p>
+                    {% if form_errors(form.fotografia)  %}
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ form_errors(form.fotografia) }}
+                        </div>
+                    {% endif %}
+                    <p>{{ form_widget( form.fotografia ) }}</p>
+                </div>
+                <div class="column-right">
+                    <p>{{ "Curriculum"|trans }}</p>
+                    {% if form_errors(form.curriculum)  %}
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ form_errors(form.curriculum) }}
+                        </div>
+                    {% endif %}
+                    <p>{{ form_widget( form.curriculum ) }}</p>
+                </div>
+                <div class="column-left">
+                    <p>{{ "E-mail"|trans }}</p>
+                    {% if form_errors(form.email)  %}
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                            {{ form_errors(form.email) }}
+                        </div>
+                    {% endif %}
+                    <p>{{ form_widget( form.email ) }}</p>
+                </div>
+                <div class="column-right">
+                    <p>{{ "Email Amigo"|trans }}</p>
+                    <p>{{ form_widget( form.emailAmigo ) }}</p>
+                </div>
+                <br>
+                {{ form_end( form ) }}
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-3 col-xs-2"></div>
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+    </head>
+    <body>
+        <p><strong>Nome:</strong> {{candidato.nome}}</p>
+        <p><strong>Telefone:</strong> {{candidato.telefone}}</p>
+        <p><strong>Data de Nascimento:</strong> {{candidato.nascimento|date("d/m/Y")}}</p>
+        <p><strong>Localidade:</strong> {{ choices[candidato.localidade] }}</p>
+        <p><strong>E-mail:</strong> {{candidato.email}}</p>
+        {% if candidato.emailAmigo|length > 0 %}
+        <p><strong>E-mail amigo:</strong> {{candidato.emailAmigo}}</p>
+        {% endif %}
+    </body>
+</html>

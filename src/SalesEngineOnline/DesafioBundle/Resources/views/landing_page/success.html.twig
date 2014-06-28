@@ -1,0 +1,15 @@
+{% extends "SalesEngineOnlineDesafioBundle:template:template.html.twig" %}
+
+{% block title %}Candidatura{% endblock %}
+
+{% block styles %}
+    {% stylesheets 
+        '@SalesEngineOnlineDesafioBundle/Resources/public/css/landing_page.css'
+    %}
+    <link rel="stylesheet" type="text/css" href="{{ asset_url }}">
+    {% endstylesheets %}
+{% endblock %}
+
+{% block content %}
+    <h1>Candidatura submetida com sucesso</h1>
+{% endblock %}

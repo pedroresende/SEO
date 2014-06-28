@@ -1,0 +1,48 @@
+sales_engine_online_desafio_homepage_post:
+    path:     /
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:LandingPage:index }
+
+### BACKOFFICE ###
+login:
+    pattern:  /admin
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:Security:login }
+
+login_check:
+    pattern: /admin/login_check
+    
+logout:
+   pattern:   /admin/logout
+
+recover:
+    pattern:  /admin/recover
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:Security:recover }
+
+backoffice:
+    pattern: /admin/backoffice
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:Admin:backoffice }
+
+optioncandidaturas:
+    pattern: /admin/backoffice/candidaturas/{option}/{id}
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:Admin/Candidaturas:candidaturas, option: 0, id: 0 }
+    methods:  [DELETE]
+
+listar_candidaturas:
+    pattern: /admin/backoffice/candidaturas/list/{id}
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:Admin/Candidaturas:listarcandidatura, id: 0 }
+    methods:  [GET]
+
+candidaturas:
+    pattern: /admin/backoffice/candidaturas
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:Admin/Candidaturas:candidaturas }
+    methods:  [GET]
+
+exporttocsv:
+    pattern: /admin/backoffice/candidaturas/csv
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:Admin/Candidaturas:exportToCsv }
+    methods:  [GET]
+
+exporttoexcel:
+    pattern: /admin/backoffice/candidaturas/excel
+    defaults: { _controller: SalesEngineOnlineDesafioBundle:Admin/Candidaturas:exportToExcel }
+    methods:  [GET]
+### BACKOFFICE ###

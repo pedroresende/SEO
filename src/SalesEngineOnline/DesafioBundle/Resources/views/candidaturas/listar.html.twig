@@ -1,0 +1,42 @@
+{% extends "SalesEngineOnlineDesafioBundle:template:backoffice.html.twig" %}
+
+{% block title %}Candidaturas - Backoffice{% endblock %}
+
+{% block maincontent %}
+    <h1>{{ "Candidaturas"|trans }}</h1>
+    <div class="column-left">
+        <p><strong>{{ "Nome"|trans }}</strong></p>
+        <p>{{ candidato.nome }}</p>
+    </div>
+    <div class="column-right">
+        <p><strong>{{ "Telefone"|trans }}</strong></p>
+        <p>{{ candidato.telefone }}</p>
+    </div>
+    <div class="column-left">
+        <p><strong>{{ "Data de Nascimento"|trans }}</strong></p>
+        <p>{{ candidato.nascimento|date("d/m/Y") }}</p>
+    </div>
+    <div class="column-right">
+        <p><strong>{{ "Localidade"|trans }}</strong></p>
+        <p>{{ choices[candidato.localidade] }}</p>
+    </div>
+    <div class="column-left">
+        <p><strong>{{ "Fotografia"|trans }}</strong></p>
+        <p><a href="/uploaded_files/{{ candidato.fotografia }}">Download</a></p>
+    </div>
+    <div class="column-right">
+        <p><strong>{{ "Curriculum"|trans }}</strong></p>
+        <p><a href="/uploaded_files/{{ candidato.curriculum }}">Downloads</a></p>
+    </div>
+    <div class="column-left">
+        <p><strong>{{ "E-mail"|trans }}</strong></p>
+        <p>{{ candidato.email }}</p>
+    </div>
+    <div class="column-right">
+        <p><strong>{{ "Email Amigo"|trans }}</strong></p>
+        <p>{{ candidato.emailAmigo }}</p>
+    </div>
+    <p>
+        <a class="btn btn-primary btn-sm" href="{{path('candidaturas')}}">{{ "Voltar"|trans }}</a>
+    </p> 
+{% endblock %}

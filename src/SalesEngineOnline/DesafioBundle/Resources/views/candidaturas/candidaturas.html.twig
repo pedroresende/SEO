@@ -1,0 +1,58 @@
+{% extends "SalesEngineOnlineDesafioBundle:template:backoffice.html.twig" %}
+
+{% block title %}Candidaturas - Backoffice{% endblock %}
+
+{% block maincontent %}
+    <h1>{{ "Candidaturas"|trans }}</h1>
+        <div id="status" class="alert alert-success alert-dismissable" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <div id="text"></div>
+        </div>
+        <div id="error" class="alert alert-danger alert-dismissable" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            <div id="text-error"></div>
+        </div>
+    {% if status %}
+        <div class="alert alert-success alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ status|trans }}
+        </div>
+    {% endif %}
+    {% if error %}
+        <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+            {{ error|trans }}
+        </div>
+    {% endif %}
+    <table class="table table-hover">
+        <tr>
+            <th></th>
+            <th>{{ "Nome do Candidato"|trans }}</th>
+            <th>{{ "Localidade"|trans }}</th>
+            <th>{{ "Opções"|trans }}</th>
+        </tr>
+        {% if candidaturasList|length > 0 %}
+
+            {% for candidatura in candidaturasList %}
+                <tr class="tr{{candidatura.id}}">
+                    <td><input type="checkbox" id="{{candidatura.id}}" onclick="SelectForRemoval('{{candidatura.id}}');"></td>
+                    <td>{{candidatura.nome}}</td>
+                    <td>{{ choices[candidatura.localidade] }}</td>
+                    <td>
+                        <a class="btn btn-default btn-xs" href="{{path('listar_candidaturas', {'id': candidatura.id})}}">{{ "Ver"|trans }}</a>
+                        <a class="btn btn-danger btn-xs" name="{{path('optioncandidaturas', {'option': 'remove','id': candidatura.id})}}">{{ "Apagar"|trans }}</a>
+                    </td>
+                </tr>
+            {% endfor %}
+        {% else %}
+            <tr>
+                <td colspan="7" >{{"Não existem Candidaturas"|trans}}</td>
+            <tr>
+        {% endif %}
+    </table>
+    <p>
+        <a class="btn btn-danger btn-sm" name="{{path('optioncandidaturas', {'option': 'removeselected'})}}" id="RemoveMany">{{ "Apagar"|trans }}</a>
+        <a class="btn btn-default btn-sm" href="{{path('exporttocsv')}}" id="RemoveMany">{{ "Exportar para CSV"|trans }}</a>
+        <a class="btn btn-default btn-sm" href="{{path('exporttoexcel')}}" id="RemoveMany">{{ "Exportar para Excel"|trans }}</a>
+    </p> 
+{% endblock %}

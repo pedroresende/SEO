@@ -1,0 +1,26 @@
+SalesEngineOnline\DesafioBundle\Entity\Candidato:
+    properties:
+        nome:
+            - NotBlank: ~
+        telefone:
+            - NotBlank: ~
+        nascimento:
+            - NotBlank: ~
+        localidade:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+        fotografia:
+            - NotBlank: ~
+            - File:
+                maxSize: 150k
+                maxSizeMessage: O tamanho máximo do ficheiro é de 150k.
+                mimeTypes: [image/jpeg, image/gif, image/png, image/tiff]
+                mimeTypesMessage: Só é possível seleccionar imagens do tipo JPG, GIT, PNG, TIF.
+        curriculum:
+            - NotBlank: ~
+            - File:
+                maxSize: 100k
+                maxSizeMessage: O tamanho máximo do ficheiro é de 100k.
+                mimeTypes: [application/pdf, application/msword, application/vnd.openxmlformats-officedocument.wordprocessingml.document, text/plain]
+                mimeTypesMessage: Só é possível seleccionar documentos do tipo PDF, DOC, DOCX e TXT.
