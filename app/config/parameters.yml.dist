@@ -19,4 +19,4 @@ parameters:
     use_assetic_controller: true
 
     uploaded_files: %kernel.root_dir%/../web/uploaded_files
-    mail: it@salesengineonline.com
+    mail: ~
